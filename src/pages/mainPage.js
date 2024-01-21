@@ -30,7 +30,6 @@ const MainPage = () => {
         fetchChallengesData().then()
     }, [])
 
-
     return (
         <div>
             <h1>Main Page</h1>
