@@ -7,6 +7,13 @@ const MainPage = () => {
     const [user, setUser] = useState(null)
     const [challenges, setChallenges] = useState(null)
 
+    const centerStyle = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center'
+    }
+
     useEffect(() => {
         const fetchUserData = async () => {
             try {
@@ -30,24 +37,31 @@ const MainPage = () => {
         fetchChallengesData().then()
     }, [])
 
+    const normalizeDate = (inputDate) => {
+        const date = new Date(inputDate);
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        const year = date.getFullYear();
+
+        return `${month}/${day}/${year}`;
+    }
+
     return (
         <div>
-            <h1>Main Page</h1>
-            <div>
-                <p>Your name is {user?.first_name || "X"} {user?.last_name}</p>
-                <p>Your blood group is {user?.blood_group}</p>
-                <p>Currently, you are on the challenge n°{user?.current_challenge_id}</p>
+            <h1 style={centerStyle}>Main Page</h1>
+            <div style={centerStyle}>
+                <p>
+                    Your name is {user?.first_name || "X"} {user?.last_name}<br/>
+                    Your blood group is {user?.blood_group}<br/>
+                    Currently, you are on the challenge n°{user?.current_challenge_id}<br/><br/>
+                    Your current challenge is: {challenges?.current?.title}<br/>
+                    This challenge will end on {normalizeDate(challenges?.current?.end_date)}<br/><br/>
+                    The next one will be: {challenges?.next?.title}<br/>
+                    This challenge will start on {normalizeDate(challenges?.next?.start_date)}
+                </p>
             </div>
-            <p>------</p>
-            <div>
-                <p>Your current challenge is: {challenges?.current?.title}</p>
-                <p>This challenge will end on {challenges?.current?.end_date}</p>
-                <p>---</p>
-                <p>The next one will be: {challenges?.next?.title}</p>
-                <p>This challenge will start on {challenges?.next?.start_date}</p>
-            </div>
-            <p>------</p>
-            <div>
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center'}}>
+                <PageChangerButton to="/certification" buttonText="See my last certification"/>
                 <PageChangerButton to="/userQRCode" buttonText="Generate the QR code"/>
             </div>
         </div>
