@@ -18,7 +18,7 @@ function App() {
         <Route path="/certification" element={<Certification />}/>
       </Routes>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
 
-import PageChangerButton from "../modules/pageChangerButton";
+import PageChangerButton from "../modules/pageChangerButton"
 
 const MainPage = () => {
     const [user, setUser] = useState(null)
@@ -38,12 +38,12 @@ const MainPage = () => {
     }, [])
 
     const normalizeDate = (inputDate) => {
-        const date = new Date(inputDate);
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const day = String(date.getDate()).padStart(2, '0');
-        const year = date.getFullYear();
+        const date = new Date(inputDate)
+        const month = String(date.getMonth() + 1).padStart(2, '0')
+        const day = String(date.getDate()).padStart(2, '0')
+        const year = date.getFullYear()
 
-        return `${month}/${day}/${year}`;
+        return `${month}/${day}/${year}`
     }
 
     return (
@@ -68,4 +68,4 @@ const MainPage = () => {
     )
 }
 
-export default MainPage;
+export default MainPage
