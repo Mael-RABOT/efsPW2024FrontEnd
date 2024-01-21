@@ -78,7 +78,7 @@ const Certification = () => {
                             dans le monde.
                         </p>
                         <p>
-                            Nous encourageons tous à suivre l'exemple de John et à participer activement au don du sang.
+                            Nous vous encourageons tous à suivre l'exemple de {user?.first_name} et à participer activement au don du sang.
                             Chaque don compte et peut avoir un impact positif sur la vie d'une personne dans le besoin.
                         </p>
                         <p>
