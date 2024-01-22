@@ -1,0 +1,32 @@
+/* src/style/certification.css */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.certification-container {
+    @apply flex flex-col items-center m-20;
+}
+
+.certification-title {
+    @apply text-4xl font-bold mb-6 p-4 rounded-lg bg-gray-200; /* Larger font size, bold, margin-bottom, and rounded rectangle */
+}
+
+.certification-content {
+    @apply text-center p-4; /* Center text and add padding */
+}
+
+.certification-button-container {
+    @apply flex justify-center mt-4 p-4 rounded-lg bg-gray-200; /* Rounded rectangle container */
+}
+
+.certification-button {
+    @apply rounded-md px-4 py-2 m-2 bg-blue-500 text-white hover:bg-blue-700 transition duration-300;
+}
+
+/* Ensure that rounded corners are applied */
+.rounded-md {
+    border-radius: 0.375rem; /* Apply rounded corners directly without @apply */
+}
+
+/* Add more styling as needed */
