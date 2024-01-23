@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PageChangerButton from "../components/pageChangerButton";
 import "../style/mainPage.css";
+import "../style/section.css"
 
 const MainPage = () => {
     const [user, setUser] = useState(null);
@@ -39,24 +40,23 @@ const MainPage = () => {
     };
 
     return (
-        <div className="main-page-container">
-            <h1 className="page-title">Main Page</h1>
+        <div className="section-container">
+            <h1 className="page-title">Don de Sang</h1>
             <div className="user-info">
                 <p>
-                    Your name is {user?.first_name || "X"} {user?.last_name || "X"}<br />
-                    Your blood group is {user?.blood_group || "X"}<br />
-                    Currently, you are on challenge n°{user?.current_challenge_id || "X"}<br /><br />
-                    Your current challenge is: {challenges?.current?.title || "No current challenge"}<br />
-                    This challenge will end on {normalizeDate(challenges?.current?.end_date)}<br /><br />
-                    The next one will be: {challenges?.next?.title || "No upcoming challenge"}<br />
-                    This challenge will start on {normalizeDate(challenges?.next?.start_date)}
+                    {user?.first_name || "X"} {user?.last_name || "X"}<br/>
+                    Mon groupe sanguin : {user?.blood_group || "X"}<br/>
+                    Je suis actuellement au challenge n°{user?.current_challenge_id || "X"}<br/><br/>
+                    Mon objectif actuel: {challenges?.current?.title || "No current challenge"}<br/>
+                    Il termine le {normalizeDate(challenges?.current?.end_date)}<br/><br/>
+                    Mon prochain objectif: {challenges?.next?.title || "No upcoming challenge"}<br/>
+                    Il commence le {normalizeDate(challenges?.next?.start_date)}
                 </p>
             </div>
-            <div className="button-container">
-                <PageChangerButton to="/certification" buttonText="See my last certification" className="rounded-button" />
-            </div>
-            <div className="button-container">
-                <PageChangerButton to="/userQRCode" buttonText="Generate the QR code" className="rounded-button" />
+            <div className="section-button-container">
+                <PageChangerButton to="/certification" buttonText="Voir ma certification" className="rounded-button"/>
+                <PageChangerButton to="/userQRCode" buttonText="Générer mon QR code" className="rounded-button"/>
+                <PageChangerButton to="/appointment" buttonText="Prendre rendez-vous" className="rounded-button"/>
             </div>
         </div>
     );

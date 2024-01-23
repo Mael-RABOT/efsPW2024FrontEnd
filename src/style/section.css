@@ -1,26 +1,27 @@
-/* src/style/certification.css */
+/* src/style/section.css */
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-.certification-container {
+.section-container {
     @apply flex flex-col items-center m-20;
 }
 
-.certification-title {
+.section-title {
     @apply text-4xl font-bold mb-6 p-4 rounded-lg bg-gray-200; /* Larger font size, bold, margin-bottom, and rounded rectangle */
 }
 
-.certification-content {
-    @apply text-center p-4; /* Center text and add padding */
+.section-content {
+    @apply flex flex-col items-center mt-4 p-4 rounded-lg bg-gray-200; /* Rounded rectangle container with vertical flex layout */
 }
 
-.certification-button-container {
-    @apply flex justify-center mt-4 p-4 rounded-lg bg-gray-200; /* Rounded rectangle container */
+.section-button-container {
+    @apply flex flex-col items-center mt-4 p-4 rounded-lg bg-gray-200; /* Rounded rectangle container with vertical flex layout */
 }
 
-.certification-button {
+
+.section-button {
     @apply rounded-md px-4 py-2 m-2 bg-blue-500 text-white hover:bg-blue-700 transition duration-300;
 }
 

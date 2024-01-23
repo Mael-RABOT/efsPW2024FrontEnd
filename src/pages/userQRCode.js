@@ -8,13 +8,13 @@ const UserQRCode = () => {
 
     return (
         <div className="qr-code-container">
-            <h1 className="qr-code-title">User QR Code</h1>
+            <h1 className="qr-code-title">Mon QR code</h1>
             <div className="qr-code">
-                <QRCode value={userId} />
+                <QRCode value={userId.toString()} />
             </div>
             <br />
             <div className="button-container">
-                <PageChangerButton to="/" buttonText="Go back to your profile" className="rounded-button" />
+                <PageChangerButton to="/" buttonText="Retourner sur la page d'acceuil" className="rounded-button" />
             </div>
         </div>
     )

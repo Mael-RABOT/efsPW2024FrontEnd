@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import '../style/section.css';
 
 const PageChangerButton = ({ to, buttonText }) => {
     const navigate = useNavigate()
@@ -9,7 +10,7 @@ const PageChangerButton = ({ to, buttonText }) => {
     }
 
     return (
-        <button onClick={handleClick}>
+        <button onClick={handleClick} className="section-button">
             {buttonText}
         </button>
     )

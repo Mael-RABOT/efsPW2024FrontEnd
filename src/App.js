@@ -7,6 +7,7 @@ import {
 import MainPage from "./pages/mainPage"
 import UserQRCode from "./pages/userQRCode"
 import Certification from "./pages/certification"
+import Appointment from "./pages/appointment";
 
 import { Frame } from "./screens/Frame"
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/preview" element={<Frame />}/>
         <Route path="/userQrCode" element={<UserQRCode />}/>
         <Route path="/certification" element={<Certification />}/>
+        <Route path="/appointment" element={<Appointment />}/>
       </Routes>
     </Router>
   )
