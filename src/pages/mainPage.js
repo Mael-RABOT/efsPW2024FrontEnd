@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import PageChangerButton from "../modules/pageChangerButton";
+import PageChangerButton from "../components/pageChangerButton";
 import "../style/mainPage.css";
 
 const MainPage = () => {

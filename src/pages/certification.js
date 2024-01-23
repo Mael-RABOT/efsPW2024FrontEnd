@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import html2canvas from 'html2canvas';
 
-import PageChangerButton from '../modules/pageChangerButton';
+import PageChangerButton from '../components/pageChangerButton';
 import '../style/certification.css';
 
 const Certification = () => {

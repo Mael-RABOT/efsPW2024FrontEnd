@@ -1,0 +1,20 @@
+.frame {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.frame .main-page-wrapper {
+  height: 1080px;
+  width: 1920px;
+}
+
+.frame .main-page-instance {
+  width: unset !important;
+}
+
+.frame .design-component-instance-node {
+  width: 1920px !important;
+}

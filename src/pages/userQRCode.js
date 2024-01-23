@@ -1,6 +1,6 @@
 import React from 'react'
 import QRCode from 'qrcode.react'
-import PageChangerButton from "../modules/pageChangerButton"
+import PageChangerButton from "../components/pageChangerButton"
 import '../style/userQRCode.css'
 
 const UserQRCode = () => {

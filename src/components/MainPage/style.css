@@ -1,0 +1,39 @@
+.main-page {
+  height: 1080px;
+  width: 1920px;
+}
+
+.main-page .overlap {
+  height: 1080px;
+  position: relative;
+}
+
+.main-page .page-instance {
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.main-page .section-eligibility {
+  left: 755px !important;
+  position: absolute !important;
+  top: 73px !important;
+}
+
+.main-page .section-schedule {
+  left: 755px !important;
+  position: absolute !important;
+  top: 339px !important;
+}
+
+.main-page .section-FAQ {
+  left: 755px !important;
+  position: absolute !important;
+  top: 605px !important;
+}
+
+.main-page .button-instance {
+  left: 755px !important;
+  position: absolute !important;
+  top: 929px !important;
+}

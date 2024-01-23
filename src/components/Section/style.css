@@ -1,0 +1,52 @@
+.section {
+  background-color: #f78484;
+  border-radius: 20px;
+  height: 242px;
+  position: relative;
+  width: 411px;
+}
+
+.section .overlap-group {
+  height: 70px;
+  left: 0;
+  position: absolute;
+  top: 20px;
+  width: 411px;
+}
+
+.section .banner {
+  background-color: #3b85f5;
+  height: 68px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  width: 411px;
+}
+
+.section .section-title {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  height: 69px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 411px;
+}
+
+.section .section-content {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 22px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 106px;
+  width: 366px;
+}
